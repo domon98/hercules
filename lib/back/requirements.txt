@@ -1,0 +1,9 @@
+Flask
+flask-mysqldb
+mysqlclient
+Werkzeug
+gpxpy
+bcrypt
+PyJWT
+flask-cors
+pytz
