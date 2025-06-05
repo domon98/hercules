@@ -43,13 +43,13 @@ HERCULES/
 cd lib/back
 ```
 
-4. Instala las dependencias:
+2. Instala las dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Ejecuta la API:
+3. Ejecuta la API:
 
 ```bash
 python apis.py
