@@ -9,7 +9,8 @@ CREATE TABLE usuarios (
     peso DECIMAL(5,2),
     altura DECIMAL(5,2),
     nivel_actividad TINYINT CHECK (nivel_actividad BETWEEN 1 AND 5),
-    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foto_perfil VARCHAR(255) DEFAULT NULL
 );
 
 CREATE TABLE comidas (
