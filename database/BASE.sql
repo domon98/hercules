@@ -22,6 +22,7 @@ CREATE TABLE comidas (
     proteinas DECIMAL(5, 2) NOT NULL,
     grasas DECIMAL(5, 2) NOT NULL,
     fecha_agregacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    gramos DECIMAL(5,2) NOT NULL DEFAULT 100.00,
     FOREIGN KEY (usuarios_fk) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
