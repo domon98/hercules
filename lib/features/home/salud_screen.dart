@@ -137,6 +137,8 @@ class _SaludScreenState extends State<SaludScreen> {
           SnackBar(content: Text('Comida agregada correctamente')),
         );
         _fetchComidas();
+        _fetchCaloriasConsumidasHoy();
+        _fetchHistoricoDiario();
         _clearForm();
         setState(() {
           showForm = false;
@@ -204,13 +206,7 @@ class _SaludScreenState extends State<SaludScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final peso = tmbData!['peso'].toString().replaceAll(".0", "");
-    final consumidoHoy = caloriasConsumidas
-        .toStringAsFixed(2)
-        .replaceAll(".00", "");
-    final restanteHoy = (tmbData!['tmb'] - caloriasConsumidas)
-        .toStringAsFixed(2)
-        .replaceAll(".00", "");
+    final peso = tmbData?['peso']?.toString().replaceAll(".0", "") ?? '--';
 
     return Scaffold(
       appBar: AppBar(
