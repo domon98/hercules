@@ -192,6 +192,8 @@ def eliminar_cuenta():
     user_id = request.user['user_id']
 
     cur = mysql.connection.cursor()
+    cur.execute("DELETE FROM publicaciones WHERE usuario_id = %s", (user_id,))
+    cur.execute("DELETE FROM amigos WHERE usuario_fk = %s OR amigo_fk = %s", (user_id, user_id))
     cur.execute("DELETE FROM usuarios WHERE id = %s", (user_id,))
     mysql.connection.commit()
     cur.close()
